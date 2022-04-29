@@ -1,55 +1,64 @@
-const generateTeam = (team) => {
-    const generateManager = (manager) => {
-        return `<div class="card">
-        <div class="card-header">
-            <h2 class="card-title">${manager.getName()}</h2>
-            <h3 class="card-title"><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</h3>
-        </div>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">ID: ${manager.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
-                <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
-            </ul>
-        </div>
-        </div>`
-    };
-    const generateEngineer = (engineer) => {
-        return `<div class="card">
-        <div class="card-header">
-            <h2 class="card-title">${engineer.getName()}</h2>
-            <h3 class="card-title"><i class="fa-light fa-glasses-round">${engineer.getRole()}</h3>
-        </div>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}"></a></li>
-            </ul>
-        </div>
-        </div>`
-    };
 
-    const generateIntern = (intern) => {
-        return `<div class="card">
-        <div class="card-header">
-            <h2 class="card-title">${intern.getName()}</h2>
-            <h3 class="card-title"><i class="fa-light fa-user-graduate"></i>${intern.getRole()}</h3>
-        </div>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">ID: ${intern.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}"></a></li>
-                <li class="list-group-item">School: ${intern.getSchool()}</li>
-            </ul>
-        </div>
-        </div>`
-    };
+
+const generateManager = (manager) => {
+    return `<div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${manager.getName()}</h2>
+                <h3 class="card-title"><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${manager.getId()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
+                    <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
+                </ul>
+            </div>
+            </div>`
 };
 
-module.exports = (team) => {
-    return `<html lang="en">
+
+const generateEngineer = (engineer) => {
+    return `<div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${engineer.getName()}</h2>
+                <h3 class="card-title"><i class="fa-light fa-glasses-round">${engineer.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${engineer.getId()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}"></a></li>
+                </ul>
+            </div>
+            </div>`
+};
     
+const generateIntern = (intern) => {
+        return `<div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${intern.getName()}</h2>
+                <h3 class="card-title"><i class="fa-light fa-user-graduate"></i>${intern.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${intern.getId()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}"></a></li>
+                    <li class="list-group-item">School: ${intern.getSchool()}</li>
+                </ul>
+            </div>
+            </div>`
+};
+    
+
+
+module.exports = (team) => {
+
+    // const manager = team.manager;
+    // const engineers = team.engineers;
+    // const interns = team.interns;
+
+    return `<!DOCTYPE html>
+    <html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +81,9 @@ module.exports = (team) => {
       <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                ${generateTeam(team)}
+            ${generateManager}
+            ${generateEngineer}
+            ${generateIntern}
             </div>
         </div>
       </div>
@@ -84,3 +95,8 @@ module.exports = (team) => {
     `;
     
 };
+
+// ${generateTeam(team)}
+//             ${generateManager(manager)}
+//             ${engineers.forEach(engineer => generateEngineer(engineer))}
+//             ${interns.forEach(intern => generateIntern(intern))}
