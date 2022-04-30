@@ -6,9 +6,9 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>My Team</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
       <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="style.css">
+      <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css” />
     </head>
     
     <body>
@@ -22,56 +22,60 @@
       <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-            (manager) => {
-    return `<div class="card">
-            <div class="card-header">
-                <h2 class="card-title">${manager.getName()}</h2>
-                <h3 class="card-title"><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">ID: ${manager.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
-                    <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
-                </ul>
-            </div>
-            </div>`
-}
-            (engineer) => {
-    return `<div class="card">
-            <div class="card-header">
-                <h2 class="card-title">${engineer.getName()}</h2>
-                <h3 class="card-title"><i class="fa-light fa-glasses-round">${engineer.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">ID: ${engineer.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
-                    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}"></a></li>
-                </ul>
-            </div>
-            </div>`
-}
-            (intern) => {
-        return `<div class="card">
-            <div class="card-header">
-                <h2 class="card-title">${intern.getName()}</h2>
-                <h3 class="card-title"><i class="fa-light fa-user-graduate"></i>${intern.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">ID: ${intern.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}"></a></li>
-                    <li class="list-group-item">School: ${intern.getSchool()}</li>
-                </ul>
-            </div>
-            </div>`
-}
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">bob</h2>
+                    <h3 class="card-title"> <span class="oi" data-glyph="person"></span> Manager</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: 1</li>
+                        <li class="list-group-item">Email: <a href="mailto:1">1</a></li>
+                        <li class="list-group-item">Office Number: 1</li>
+                    </ul>
+                </div>
+                </div><div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">sue</h2>
+                    <h3 class="card-title"> <span class="oi oi-monitor"></span> Engineer</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: 2</li>
+                        <li class="list-group-item">Email: <a href="mailto:2">2</a></li>
+                        <li class="list-group-item">GitHub: <a href="https://github.com/2" target="_blank">2</a></li>
+                    </ul>
+                </div>
+                </div><div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">joe</h2>
+                    <h3 class="card-title"> <span class="oi oi-pencil"></span> Intern</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: 3</li>
+                        <li class="list-group-item">Email: <a href="mailto:3">3</a></li>
+                        <li class="list-group-item">School: 3</li>
+                    </ul>
+                </div>
+                </div><div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">john</h2>
+                    <h3 class="card-title"> <span class="oi oi-pencil"></span> Intern</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: 4</li>
+                        <li class="list-group-item">Email: <a href="mailto:4">4</a></li>
+                        <li class="list-group-item">School: 4</li>
+                    </ul>
+                </div>
+                </div>
             </div>
         </div>
       </div>
       <footer class="container text-center py-3">
-        <h3 class="text-dark">&copy;2020 by</h3>
+        <h3 class="text-dark">&copy;2022 by Thuy Nguyen</h3>
       </footer>
     </body>
     </html>
