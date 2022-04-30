@@ -10,12 +10,11 @@ Clone the code from gitHub onto your local computer, then run 'npm install' in t
 Run 'node index.js' in the command-line interface, then answer the provided prompt questions.  A webpage will generate once all questions have been answered.  Webpage can be viewed on index.html.
 
 ## Video link:
-https://user-images.githubusercontent.com/92459709/165009012-9cfa2b57-9f30-4c6a-8132-1d4a6883da06.mp4   ?????????????change link
-
+https://user-images.githubusercontent.com/92459709/166110877-77836ac7-2e6f-43dc-ad98-f0bcc892c86d.mp4
 
 
 ## GitHub link:
-[My GitHub link](https://thuytttn.github.io/readme-generator/)          ???????????????change link
+[My GitHub link](https://thuytttn.github.io/team-profile-generator/) 
 
 ## License:
-ISC   ??????????????????????????
+ISC, MIT
